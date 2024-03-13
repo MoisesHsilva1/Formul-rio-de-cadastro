@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de cadastro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>Formulario de cadastro de usuario</h1>
+
+    <main class="container">
+    <form class="CamposPessoais">
+        <label>Nome:</label>
+            <input type="text"  class="CampoNome" >
+        
+        <label>Sobrenome: </label>
+            <input type="text" class="CampoSobrenome"  ><br><br>
+       
+        <label>E-mail: </label>
+            <input type="email" class="CampoEmail" d>
+       
+        <label>Telefone:   </label>
+            <input type="number" class="CampoTelefone" ><br><br>
+     
+        <div class="radios">
+              <label>CPF:</label>
+            <input type="radio" name="radio" class="Campo-Cpf" >
+            <div class="radioCpf-conteudo" style="display: none;">
+                <input type="number" class="CampoCpf2" >
+              </div>
+              
+        <label>RG:</label>
+            <input type="radio" name="radio" class="Campo-Rg">
+            <div class="radioRg-conteudo" style="display: none;">
+                <input type="number" class="Campo-Rg2" >
+              </div>
+        <br><br>
+        </div>
+    <form class="CamposEndereco">
+        <label>CEP:</label>
+            <input type="number" class="Campo-Cep" >
+
+        <label>Rua/Aveninda:</label>
+            <input type="text" class="Campo-Rua" ><br><br>
+        
+        <label>Numero:</label>
+            <input type="number" class="Campo-Numero" >
+        
+        <label>Estado:</label>
+        <input type="text" class="Campo-Estado" ><br><br>
+
+        <label>Cidade:</label>
+        <input type="text" class="Campo-Cidade" d>
+
+        <label >Referencia</label>
+        <input type="text" class="Campo-referencia" placeholder="ex: padaria, escola, posto..."><br><br>
+    </div>
+    <div class="button">
+        <button onclick="Cadastrar()">Cadastrar</button>
+    </div>      
+    </main>
+</body>
+</html>
