@@ -4,11 +4,13 @@
 }
 
 h1 {
-  color: antiquewhite;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
 }
 
 body {
-  background: blue;
+ background: #023E8A;
   
 
 }
@@ -32,6 +34,6 @@ h1 {
   padding: 2px;
 }
 
-.button{
+.footer{
   text-align: center;
 }

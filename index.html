@@ -28,15 +28,13 @@
         <div class="radios">
               <label>CPF:</label>
             <input type="radio" name="radio" class="Campo-Cpf" >
-            <div class="radioCpf-conteudo" style="display: none;">
-                <input type="number" class="CampoCpf2" >
-              </div>
+            <input type="number" class="CampoCpf2">
+           
               
         <label>RG:</label>
             <input type="radio" name="radio" class="Campo-Rg">
-            <div class="radioRg-conteudo" style="display: none;">
-                <input type="number" class="Campo-Rg2" >
-              </div>
+            <input type="number" class="Campo-Rg2" >
+       
         <br><br>
         </div>
     <form class="CamposEndereco">
@@ -58,9 +56,9 @@
         <label >Referencia</label>
         <input type="text" class="Campo-referencia" placeholder="ex: padaria, escola, posto..."><br><br>
     </div>
-    <div class="button">
-        <button onclick="Cadastrar()">Cadastrar</button>
-    </div>      
+    <div class="footer">
+        <button type="button" class="button"  onclick="validarForm()">Enviar</button>
+    </div> 
     </main>
 </body>
 </html>
