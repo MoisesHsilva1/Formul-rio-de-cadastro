@@ -1,7 +1,7 @@
 function validarForm () {
     let inputCpf = document.querySelector('.CampoCpf2');
     
-    if(inputCpf.value > 11) {
+    if(inputCpf.value.length >= 12) {
         window.alert('CPF TEM LIMITE DE 11 CARACTERES');
         return false;
     } else {
@@ -11,7 +11,7 @@ function validarForm () {
 function validarRG () {
     let inputRg = document.querySelector('.Campo-Rg2');
 
-    if (inputRg.value > 9) {
+    if (inputRg.value.length >= 10) {
         window.alert('RG TEM LIMITE DE 9 CARACTERES');
         return false;
     } else
