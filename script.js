@@ -1,5 +1,9 @@
+const inputRg = document.querySelector('.Campo-Rg');
+const inputCpf = document.querySelector('.CampoCpf');
+const radioCpf = document.querySelector('.Radio-Cpf')
+const radioRg = document.querySelector('.Radio-Rg')
+
 function validarForm () {
-    let inputCpf = document.querySelector('.CampoCpf2');
     
     if(inputCpf.value.length >= 12) {
         window.alert('CPF TEM LIMITE DE 11 CARACTERES');
@@ -9,7 +13,6 @@ function validarForm () {
     }  
 }
 function validarRG () {
-    let inputRg = document.querySelector('.Campo-Rg2');
 
     if (inputRg.value.length >= 10) {
         window.alert('RG TEM LIMITE DE 9 CARACTERES');
@@ -21,3 +24,10 @@ function validarRG () {
  document.querySelector('.button').addEventListener('click', function() {
      validarRG();
 });
+
+document.getElementById('radio').forEach(function(radio) {
+    
+})
+
+
+
