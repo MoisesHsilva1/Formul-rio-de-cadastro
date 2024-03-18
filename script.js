@@ -28,7 +28,6 @@ function validarRG () {
      validarRG();
 });
 
-
 (function(){
   
   inputCep.addEventListener('blur', e=> {
