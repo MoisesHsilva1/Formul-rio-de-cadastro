@@ -4,7 +4,6 @@ const inputCep =  document.querySelector('#Campo-Cep');
 const inputCpf = document.querySelector('#Campo-Cpf');
 const inputRg = document.querySelector('#Campo-Rg');
 
-
 function validarCpf () {
     if(inputCpf.value.length >= 12) {
         window.alert('CPF TEM LIMITE DE 11 CARACTERES');
@@ -48,12 +47,6 @@ function validarRG () {
       
       
   });
-
-	
-
-
-
-
 
 })();
 
