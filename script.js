@@ -1,6 +1,9 @@
-const radioCpf = document.querySelector('.Radio-Cpf');
-const radioRg = document.querySelector('.Radio-Rg');
-const inputCep =  document.querySelector('.Campo-Cep');
+const radioCpf = document.querySelector('#Radio-Cpf');
+const radioRg = document.querySelector('#Radio-Rg');
+const inputCep =  document.querySelector('#Campo-Cep');
+const inputCpf = document.querySelector('#Campo-Cpf');
+const inputRg = document.querySelector('#Campo-Rg');
+
 
 function validarCpf () {
     if(inputCpf.value.length >= 12) {
@@ -25,34 +28,42 @@ function validarRG () {
      validarRG();
 });
 
-function validarCep () {
-    if( inputCep.value.length >= 10) {
-        window.alert('CEP TEM LIMITE DE 9 CARACTERESS');
-        return false;
-    } else {
-        return true;
-    }
-}
-    document.querySelector('.button').addEventListener('click', function() {
-    validarCep();
-});
 
-  document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
-        radio.addEventListener('change', function() {
-            if (this.value === "cpf") {
-              document.querySelector('.Campo-Cpf').classList.remove('hidden');
-              document.querySelector('.Campo-Cpf').setAttribute('required', true);
-              document.querySelector('.Campo-Rg').classList.add('hidden');
-              document.querySelector('.Campo-Rg').removeAttribute('required');
-            } else if (this.value === "rg") {
-             document.querySelector('.Campo-Cpf').classList.add('hidden')
-             document.querySelector('.CampoCpf').removeAttribute('required');
-             document.querySelector('.Campo-Rg').classList.remove('hidden');
-             document.querySelector('.Campo-Rg').setAttribute('required', true);
-            } 
-        });
- });
+(function(){
+  
+  inputCep.addEventListener('blur', e=> {
+  		const value = inputCep.value.replace(/[^0-9]+/, '');
+      const url = `https://viacep.com.br/ws/${value}/json/`;
+      
+      fetch(url)
+      .then( response => response.json())
+      .then( json => {
+      		
+          if( json.logradouro ) {
+          	document.querySelector('#Campo-Rua').value = json.logradouro;
+            document.querySelector('#Campo-Bairro').value = json.bairro;
+            document.querySelector('#Campo-Cidade').value = json.localidade;
+          }
+      
+      });
+      
+      
+  });
 
+	
+
+
+
+
+
+})();
+
+
+
+
+
+
+  
   
 
 

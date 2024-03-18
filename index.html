@@ -8,56 +8,86 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-
+    
     <h1>Formulario de cadastro de usuario</h1>
-
-    <main class="container">
-    <form class="CamposPessoais">
+ 
+        <form class="container">
         <label>Nome:</label>
-            <input type="text"  class="CampoNome" >
+            <input type="text"  id="CampoNome" >
         
         <label>Sobrenome: </label>
-            <input type="text" class="CampoSobrenome"  ><br><br>
+            <input type="text" id="CampoSobrenome"  ><br><br>
        
         <label>E-mail: </label>
-            <input type="email" class="CampoEmail" d>
+            <input type="email" id="CampoEmail" >
        
         <label>Telefone:   </label>
-            <input type="number" class="CampoTelefone" ><br><br>
+            <input type="number" id="CampoTelefone" ><br><br>
      
         <div class="radios">
               <label>CPF:</label>
-            <input type="radio" name="documento" value="cpf" class="Radio-Cpf" checked>
-            <input type="number" class="CampoCpf" required>
+            <input type="radio" name="documento" value="cpf" id="Radio-Cpf"  checked>
+            <input type="number" id="Campo-Cpf" required>
         
         <label>RG:</label>
-            <input type="radio" name="documento" value="rg" class="Radio-Rg">
-            <input type="number" class="hidden  " required>
+            <input type="radio" name="documento" value="rg" id="Radio-Rg">
+            <input type="number" id="Campo-Rg"  required>
        
         <br><br>
         </div>
-    <form class="CamposEndereco">
+    
         <label>CEP:</label>
-            <input type="number" class="Campo-Cep" >
+            <input type="number" id="Campo-Cep" >
 
         <label>Rua/Aveninda:</label>
-            <input type="text" class="Campo-Rua" ><br><br>
+            <input type="text" id="Campo-Rua" ><br><br>
+
+        <label>Bairro:</label>
+            <input type="text" id="Campo-Bairro">
         
         <label>Numero:</label>
-            <input type="number" class="Campo-Numero" >
+            <input type="number" id="Campo-Numero" ><br><br>
         
         <label>Estado:</label>
-        <input type="text" class="Campo-Estado" ><br><br>
+        <select id="uf">
+            <option value=""></option hidden>
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
 
         <label>Cidade:</label>
-        <input type="text" class="Campo-Cidade" d>
+            <input type="text" id="Campo-Cidade"> <br><br>
+     
+        <label >Complemento:</label>
+            <input type="text" id="Campo-CSomplemento"placeholder="Ex: padaria, escola, posto..."><br><br>
 
-        <label >Referencia</label>
-        <input type="text" class="Campo-referencia" placeholder="ex: padaria, escola, posto..."><br><br>
-    </div>
-    <div class="footer">
-        <button  class="button"  onclick="validarForm()">Enviar</button>
+    <div class="footer"> 
+         <button  class="button"  onclick="validarForm()">Enviar</button>
     </div> 
-    </main>
 </body>
 </html>
