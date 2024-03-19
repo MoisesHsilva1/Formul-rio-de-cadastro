@@ -3,6 +3,8 @@ const radioRg = document.querySelector('#Radio-Rg');
 const inputCep =  document.querySelector('#Campo-Cep');
 const inputCpf = document.querySelector('#Campo-Cpf');
 const inputRg = document.querySelector('#Campo-Rg');
+const inputTelefone = document.querySelector('#CampoTelefone');
+let inputEmail = document.querySelector('#CampoEmail');
 
 function validarCpf () {
     if(inputCpf.value.length >= 12) {
@@ -50,10 +52,36 @@ function validarRG () {
 
 })();
 
+function validarTelefone () {
+    if(inputTelefone.value.length >= 12) {
+        window.alert('TELEFONE INCORRETO LIMITE DE CARACTERES');
+        return false;
+    } else {
+        return true;
+    }
+}
+ document.querySelector('.button').addEventListener('click',  function() {
+    validarTelefone();
+ });
 
 
+function validarEmail (inputEmail) {
+    if (inputEmail.indexOf(".") === -1) {
+        window.alert('Email incorreto. O email deve conter "."');
+        return false;
+    } 
+    if (inputEmail.includes(" ")) {
+        window.alert('O Email não pode contém espaços em branco');
+        return false;
+    }
+    return true;
+}
+document.querySelector('.button').addEventListener('click', function() {
+    let inputEmail = document.querySelector('#CampoEmail').value;
+    validarEmail(inputEmail);
+});
 
-
+ 
 
   
   
