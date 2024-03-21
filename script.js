@@ -7,7 +7,13 @@ const inputTelefone = document.querySelector('#CampoTelefone');
 let inputEmail = document.querySelector('#CampoEmail');
 
 function validarCpf (inputCpf) {
-}
+    if (inputCpf.value >= 11){
+        window.alert('O MAXIMO DE CARACTERES NO CPF É DE 11 CARACTERES!!');
+        return false;
+    } else {
+        return true;
+    };
+};
 document.querySelector('.button').addEventListener('click', function() {
     validarCpf();
 });
