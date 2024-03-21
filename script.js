@@ -6,13 +6,7 @@ const inputRg = document.querySelector('#Campo-Rg');
 const inputTelefone = document.querySelector('#CampoTelefone');
 let inputEmail = document.querySelector('#CampoEmail');
 
-function validarCpf () {
-    if(inputCpf.value.length >= 12) {
-        window.alert('CPF TEM LIMITE DE 11 CARACTERES');
-        return false;
-    } else {
-       return true;
-    }      
+function validarCpf (inputCpf) {
 }
 document.querySelector('.button').addEventListener('click', function() {
     validarCpf();
