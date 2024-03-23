@@ -24,7 +24,7 @@ function validarRG () {
         return false;
     } else
     return true;
-}
+};
     document.querySelector('.button').addEventListener('click', function() {
      validarRG();
 });
