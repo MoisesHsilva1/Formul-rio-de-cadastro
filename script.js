@@ -67,3 +67,7 @@ document.querySelector('.button').addEventListener('click', function() {
     validarEmail(inputEmail);
 });
 
+for (inputCep == 1) {
+    
+}
+
