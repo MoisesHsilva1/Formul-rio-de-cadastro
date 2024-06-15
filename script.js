@@ -67,3 +67,4 @@ document.querySelector('.button').addEventListener('click', function() {
     validarEmail(inputEmail);
 });
 
+
