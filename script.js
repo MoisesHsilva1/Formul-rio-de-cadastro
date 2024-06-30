@@ -68,11 +68,13 @@ document.querySelector('.button').addEventListener('click', function () {
 
 function RadiosDisable () {
     let radios = document.getElementsByName('Documento')
-    if (radioCpf == checked) {
-        radioRg.disabled = true;
+    if (radios[0].checked) {
+        document.getElementsByClass('formulario__campos__radios')[1].disabled = true;
+        document.getElementsByClass('formulario__campos__radios')[0].disabled =  false;
 
-    } else {
-        inputRg.disabled = true;
+    } else if (radios[1].checked){
+      document.getElementsByClass('formulario__campos__radios')[1].disabled =  true;
+      document.getElementsByClass('formulario__campos__radios')[0];disabled = false;
     }
 }
 
