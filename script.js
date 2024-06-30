@@ -1,12 +1,18 @@
 const radioCpf = document.querySelector('#Radio-Cpf');
 const radioRg = document.querySelector('#Radio-Rg');
-let inputCep = document.querySelector('#Campo-Cep');
+let inputCep = document.querySelector('#Campo-Cep').value;
 let inputCpf = document.querySelector('#Campo-Cpf');
 let inputRg = document.querySelector('#Campo-Rg');
 let inputTelefone = document.querySelector('#CampoTelefone');
-const radios = document.getElementsByName('Documento')
+const radios = document.getElementsByName('Documento');
 let inputEmail = document.querySelector('#CampoEmail');
-let campoRua =  document.querySelector('#')
+let CampoRua =  document.querySelector('#Campo-Rua')
+let CampoBairro = document.querySelector('#Campo-Bairro')
+let CampoNumero =  document.querySelector('#Campo-Numero')
+let CampoEstados = document.querySelector('#uf') 
+let CampoCidade =  document.querySelector('#Campo-Cidade')
+let CampoComplemento = document.querySelector('#Campo-Complemento')
+const CamposEndereco = document.getElementsByClassName('formulario__campos__endereco')
 
 function validarRG() {
     if (inputRg.value.length <= 10) {
@@ -79,8 +85,9 @@ function alterarDisableRadios() {
     }
 }
 function CepHabilitaCampos () {
-    if (inputCep == '') {
-
+    console.log('tESTNANDO')
+    if (inputCep === '') {
+        CamposEndereco.hidden = false;
     }
 }
 
