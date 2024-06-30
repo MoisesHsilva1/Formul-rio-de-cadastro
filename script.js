@@ -66,17 +66,16 @@ document.querySelector('.button').addEventListener('click', function () {
     validarEmail(inputEmail);
 });
 
-function RadiosAtivoCPF() {
-    if (radioCpf.checked) {
-        radioRg.disabled = false;
+function RadiosDisable () {
+    let radios = document.getElementsByName('Documento')
+    if (radioCpf == checked) {
+        radioRg.disabled = true;
 
     } else {
-        inputRg.disabled = false;
+        inputRg.disabled = true;
     }
 }
-document.querySelector('#Campo-Cpf').addEventListener('change', function () {
-    RadiosAtivoCPF();
-})
+
 
 
 
