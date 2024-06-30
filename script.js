@@ -1,10 +1,12 @@
 const radioCpf = document.querySelector('#Radio-Cpf');
 const radioRg = document.querySelector('#Radio-Rg');
-const inputCep = document.querySelector('#Campo-Cep');
-const inputCpf = document.querySelector('#Campo-Cpf');
-const inputRg = document.querySelector('#Campo-Rg');
-const inputTelefone = document.querySelector('#CampoTelefone');
+let inputCep = document.querySelector('#Campo-Cep');
+let inputCpf = document.querySelector('#Campo-Cpf');
+let inputRg = document.querySelector('#Campo-Rg');
+let inputTelefone = document.querySelector('#CampoTelefone');
+const radios = document.getElementsByName('Documento')
 let inputEmail = document.querySelector('#CampoEmail');
+let campoRua =  document.querySelector('#')
 
 function validarRG() {
     if (inputRg.value.length <= 10) {
@@ -61,20 +63,24 @@ function validarEmail(inputEmail) {
     }
     return true;
 }
+
 document.querySelector('.button').addEventListener('click', function () {
     let inputEmail = document.querySelector('#CampoEmail').value;
     validarEmail(inputEmail);
 });
 
-function RadiosDisable () {
-    let radios = document.getElementsByName('Documento')
+function alterarDisableRadios() {
     if (radios[0].checked) {
-        document.getElementsByClass('formulario__campos__radios')[1].disabled = true;
-        document.getElementsByClass('formulario__campos__radios')[0].disabled =  false;
+        inputCpf.disabled = false;
+        inputRg.disabled = true;
+    } else if (radios[1].checked) {
+        inputRg.disabled = false;
+        inputCpf.disabled = true;
+    }
+}
+function CepHabilitaCampos () {
+    if (inputCep == '') {
 
-    } else if (radios[1].checked){
-      document.getElementsByClass('formulario__campos__radios')[1].disabled =  true;
-      document.getElementsByClass('formulario__campos__radios')[0];disabled = false;
     }
 }
 
