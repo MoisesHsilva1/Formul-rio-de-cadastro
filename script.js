@@ -86,7 +86,7 @@ function alterarDisableRadios() {
 }
 function CepHabilitaCampos () {
     console.log('tESTNANDO')
-    if (inputCep === '') {
+    if (inputCep == '') {
         CamposEndereco.hidden = false;
     }
 }
