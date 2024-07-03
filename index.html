@@ -10,23 +10,22 @@
 </head>
 
 <body>
-
     <h1 class="titulo__destaque">Formulario de cadastro</h1>
-
+    
     <form class="formulario__campos">
         <label>Nome:</label>
-        <input type="text" id="CampoNome">
+        <input type="text" id="CampoNome" >
 
         <label>Sobrenome: </label>
-        <input type="text" id="CampoSobrenome"><br><br>
+        <input type="text" id="CampoSobrenome" ><br><br>
 
         <label>E-mail: </label>
-        <input type="email" id="CampoEmail" required>
+        <input type="email" id="CampoEmail" >
 
         <label>Telefone: </label>
         <input type="number" id="CampoTelefone"><br><br>
 
-        <div class="formulario__campos__radios" required>
+        <div class="formulario__campos__radios" >
             <label>CPF:</label>
             <input type="radio" name="Documento" value="cpf" id="Radio-Cpf" onclick="alterarDisableRadios()" checked>
             <input type="number" id="Campo-Cpf">
@@ -37,58 +36,58 @@
 
             <br><br>
 
-        </div>  
-        <label>CEP:</label>
-        <input type="number" id="Campo-Cep" onclick="CepHabilitaCampos()" required>
-        <br><br>
-        <div class="formulario__campos__endereco" hidden>
-    
-        <label>Rua/Aveninda:</label>
-        <input type="text" id="Campo-Rua" hidden><br><br>
+        </div>
+        
+        <div class="formulario__campos__endereco">
+            <label>CEP:</label>
+            <input type="number" id="Campo-Cep" name="cep" required>
 
-        <label>Bairro:</label>
-        <input type="text" id="Campo-Bairro">
+            <label>Rua/Aveninda:</label>
+            <input type="text" id="Campo-Rua" name="rua" ><br><br>
 
-        <label>Numero:</label>
-        <input type="number" id="Campo-Numero" required><br><br>
+            <label>Bairro:</label>
+            <input type="text" id="Campo-Bairro" name="bairro">
 
-        <label>Estado:</label>
-        <select id="uf">
-            <option value=""></option hidden>
-            <option value="AC">Acre</option>
-            <option value="AL">Alagoas</option>
-            <option value="AP">Amapá</option>
-            <option value="AM">Amazonas</option>
-            <option value="BA">Bahia</option>
-            <option value="CE">Ceará</option>
-            <option value="DF">Distrito Federal</option>
-            <option value="ES">Espírito Santo</option>
-            <option value="GO">Goiás</option>
-            <option value="MA">Maranhão</option>
-            <option value="MT">Mato Grosso</option>
-            <option value="MS">Mato Grosso do Sul</option>
-            <option value="MG">Minas Gerais</option>
-            <option value="PA">Pará</option>
-            <option value="PB">Paraíba</option>
-            <option value="PR">Paraná</option>
-            <option value="PE">Pernambuco</option>
-            <option value="PI">Piauí</option>
-            <option value="RJ">Rio de Janeiro</option>
-            <option value="RN">Rio Grande do Norte</option>
-            <option value="RS">Rio Grande do Sul</option>
-            <option value="RO">Rondônia</option>
-            <option value="RR">Roraima</option>
-            <option value="SC">Santa Catarina</option>
-            <option value="SP">São Paulo</option>
-            <option value="SE">Sergipe</option>
-            <option value="TO">Tocantins</option>
-        </select>
+            <label>Numero:</label>
+            <input type="number" id="Campo-Numero"><br><br>
 
-        <label>Cidade:</label>
-        <input type="text" id="Campo-Cidade"> <br><br>
+            <label>Estado:</label>
+            <select id="uf">
+                <option value=""></option hidden>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
 
-        <label>Complemento:</label>
-        <input type="text" id="Campo-Complemento" placeholder="Ex: padaria, escola, posto..."><br><br>
+            <label>Cidade:</label>
+            <input type="text" id="Campo-Cidade" name="cidade"> <br><br>
+
+            <label>Complemento:</label>
+            <input type="text" id="Campo-Complemento" placeholder="Ex: padaria, escola, posto..."><br><br>
         </div>
         <div class="formulario__campos__button">
             <button class="button" onclick="validarForm()">Enviar</button>
