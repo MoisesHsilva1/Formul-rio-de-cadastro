@@ -14,18 +14,6 @@ let CampoCidade =  document.querySelector('#Campo-Cidade')
 let CampoComplemento = document.querySelector('#Campo-Complemento')
 const CamposEndereco = document.getElementsByClassName('.formulario__campos__endereco')
 
-/*
-function validarRG() {
-    if (inputRg.value.length <= 10) {
-        window.alert('RG TEM LIMITE DE 9 CARACTERES');
-        return false;
-    } else
-        return true;
-};
-document.querySelector('.button').addEventListener('click', function () {
-    validarRG();
-});
-*/
 (function() {
 
     const cep = document.querySelector('input[name="cep"]')
