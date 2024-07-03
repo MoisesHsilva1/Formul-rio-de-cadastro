@@ -86,8 +86,8 @@ function alterarDisableRadios() {
 }
 function CepHabilitaCampos () {
     console.log('tESTNANDO')
-    if (inputCep == '') {
-        C.hidden = false;
+    if (inputCep.value == '') {
+        CampoRua.hidden = false;
     }
 }
 
