@@ -29,9 +29,10 @@
             <input type="number" id="Campo-Rg" maxlength="10">
             <br><br>
         </div>
-        <div class="formulario__campos__endereco" autocomplete="off">
+        <div class="formulario__campos__endereco" >
             <label>CEP:</label>
-            <input type="number" id="Campo-Cep" name="cep" maxlength="9"  onclick="ValidarCep()" required>
+            <input type="number" id="Campo-Cep" name="cep" maxlength="8" autocomplete="off"  required>
+            <p id="Campo-MensagemErro-Cep"> CEP não encotrado </p> 
             <label>Rua/Aveninda:</label>
             <input type="text" id="Campo-Rua" name="rua"><br><br>
             <label>Bairro:</label>
