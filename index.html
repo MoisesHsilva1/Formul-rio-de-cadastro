@@ -11,46 +11,33 @@
 
 <body>
     <h1 class="titulo__destaque">Formulario de cadastro</h1>
-    
-    <form class="formulario__campos">
+    <form class="formulario__campos" autocomplete="off">
         <label>Nome:</label>
-        <input type="text" id="CampoNome"  maxlength="15" autocomplete="off" >
-
+        <input type="text" id="CampoNome" maxlength="15">
         <label>Sobrenome: </label>
-        <input type="text" id="CampoSobrenome"  maxlength="20" autocomplete="off" ><br><br>
-
+        <input type="text" id="CampoSobrenome" maxlength="20"><br><br>
         <label>E-mail: </label>
-        <input type="email" id="CampoEmail" maxlength="20" autocomplete="off" >
-
+        <input type="email" id="CampoEmail" maxlength="20">
         <label>Telefone: </label>
-        <input type="number" id="CampoTelefone" maxlength="13" autocomplete="off" ><br><br>
-
-        <div class="formulario__campos__radios" >
+        <input type="number" id="CampoTelefone" maxlength="13"><br><br>
+        <div class="formulario__campos__radios">
             <label>CPF:</label>
             <input type="radio" name="Documento" value="cpf" id="Radio-Cpf" onclick="alterarDisableRadios()" checked>
             <input type="number" id="Campo-Cpf" maxlength="11">
-
             <label>RG:</label>
             <input type="radio" name="Documento" value="rg" id="Radio-Rg" onclick="alterarDisableRadios()">
             <input type="number" id="Campo-Rg" maxlength="10">
-
             <br><br>
-
         </div>
-        
-        <div class="formulario__campos__endereco">
+        <div class="formulario__campos__endereco" autocomplete="off">
             <label>CEP:</label>
-            <input type="number" id="Campo-Cep" name="cep" maxlength="9" required>
-
+            <input type="number" id="Campo-Cep" name="cep" maxlength="9"  onclick="ValidarCep()" required>
             <label>Rua/Aveninda:</label>
-            <input type="text" id="Campo-Rua" autocomplete="off" name="rua" ><br><br>
-
+            <input type="text" id="Campo-Rua" name="rua"><br><br>
             <label>Bairro:</label>
-            <input type="text" id="Campo-Bairro" autocomplete="off" name="bairro">
-
+            <input type="text" id="Campo-Bairro" name="bairro">
             <label>Numero:</label>
-            <input type="number" id="Campo-Numero" autocomplete="off" ><br><br>
-
+            <input type="number" id="Campo-Numero"><br><br>
             <label>Estado:</label>
             <select id="uf">
                 <option value=""></option hidden>
@@ -82,16 +69,15 @@
                 <option value="SE">Sergipe</option>
                 <option value="TO">Tocantins</option>
             </select>
-
             <label>Cidade:</label>
-            <input type="text" id="Campo-Cidade" name="cidade" autocomplete="off"> <br><br>
-
+            <input type="text" id="Campo-Cidade" name="cidade"> <br><br>
             <label>Complemento:</label>
             <input type="text" id="Campo-Complemento" placeholder="Ex: padaria, escola, posto..."><br><br>
         </div>
         <div class="formulario__campos__button">
             <button class="button" onclick="validarForm()">Enviar</button>
         </div>
+    </form>
 </body>
 
 </html>
