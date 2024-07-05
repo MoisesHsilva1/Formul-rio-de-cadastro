@@ -28,14 +28,15 @@ document.querySelector('#Campo-Cep').addEventListener('input', function () {
 
 document.querySelector('.button').addEventListener('click', function () {
     let inputEmail = document.querySelector('#CampoEmail').value;
+    const MensagemErrorEmail =  document.querySelector('#CampoEmail-MensagemError')
 
     if (inputEmail.indexOf(".") == -1) {
-        window.alert('Email incorreto. O email deve conter "."');
-        return false;
+        MensagemErrorEmail.style.display = 'block';
+        return false; 
     };
     if (inputEmail.includes(" ")) {
-        window.alert('O Email não pode contém espaços em branco');
-        return false;
+       MensagemErrorEmail.style.display = 'block';
+       return false;
     };
 });
 
