@@ -40,3 +40,6 @@ hidden {
 #Campo-MensagemErro-Cep {
   display: none;
 }
+#CampoEmail-MensagemError {
+  display: none;
+}

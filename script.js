@@ -58,6 +58,10 @@ function alterarDisableRadios() {
 }
 
 
+ function validarForm() {
+    console.log('testando direcinamento')
+    
+ }
 
 
 
