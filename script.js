@@ -25,7 +25,6 @@ document.querySelector('#Campo-Cep').addEventListener('input', function () {
             });
     }
 })
-
 document.querySelector('.button').addEventListener('click', function () {
     let inputEmail = document.querySelector('#CampoEmail').value;
     const MensagemErrorEmail =  document.querySelector('#CampoEmail-MensagemError')
@@ -58,10 +57,8 @@ function alterarDisableRadios() {
     }
 }
 
-
  function validarForm() {
-    console.log('testando direcinamento')
-    
+   
  }
 
 
