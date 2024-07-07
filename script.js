@@ -1,3 +1,9 @@
+const radioCpf = document.querySelector('#Radio-Cpf');
+const radioRg = document.querySelector('#Radio-Rg');
+let inputCpf = document.querySelector('#Campo-Cpf');
+let inputRg = document.querySelector('#Campo-Rg');
+const radios = document.getElementsByName('Documento');
+
 document.querySelector('#Campo-Cep').addEventListener('input', function () {
     const cep = this.value
     const mensagemError = document.querySelector('#Campo-MensagemErro-Cep');
@@ -25,29 +31,19 @@ document.querySelector('#Campo-Cep').addEventListener('input', function () {
             });
     }
 })
-document.querySelector('.button').addEventListener('click', function () {
-    let inputEmail = document.querySelector('#CampoEmail').value;
+document.querySelector('#buton').addEventListener('click', function () {
+    const Email = document.getElementById('CampoEmail')
     const MensagemErrorEmail =  document.querySelector('#CampoEmail-MensagemError')
 
-    if (inputEmail.indexOf(".") == -1) {
+    if (Email !== ".") { // tenho que atualizar
         MensagemErrorEmail.style.display = 'block';
         return false; 
-    };
-    if (inputEmail.includes(" ")) {
-       MensagemErrorEmail.style.display = 'block';
-       return false;
     };
 });
 
 function alterarDisableRadios() {
-    const radioCpf = document.querySelector('#Radio-Cpf');
-    const radioRg = document.querySelector('#Radio-Rg');
-    let inputCpf = document.querySelector('#Campo-Cpf');
-    let inputRg = document.querySelector('#Campo-Rg');
-    const radios = document.getElementsByName('Documento');
-
     if (radios[0].checked) {
-        inputCpf.disabled = false;
+        inputCpf.disabled = false; 
         inputCpf.required = true;
         inputRg.disabled = true;
     } else if (radios[1].checked) {
@@ -56,10 +52,13 @@ function alterarDisableRadios() {
         inputCpf.disabled = true;
     }
 }
+function ValidarCpf (inputCpf) {
 
- function validarForm() {
-   
- }
+    if(inputCpf.value == '00000000') {
+        window.alert('TESTE')
+        return false
+    }
+}
 
 
 

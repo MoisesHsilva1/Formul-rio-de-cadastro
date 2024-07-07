@@ -15,16 +15,16 @@
         <label>Nome:</label>
         <input type="text" id="CampoNome" data-cy="CampoNome" maxlength="15">
         <label>Sobrenome: </label>
-        <input type="text" id="CampoSobrenome" maxlength="20"><br><br>
+        <input type="text" id="CampoSobrenome" data-cy="CampoSobrenome" maxlength="20"><br><br>
         <label>E-mail: </label>
-        <input type="email" id="CampoEmail" maxlength="20">
+        <input type="email" id="CampoEmail" maxlength="20" required>
          <p id="CampoEmail-MensagemError">E-mail incorreto</p>
         <label>Telefone: </label>
         <input type="number" id="CampoTelefone" maxlength="13"><br><br>
         <div class="formulario__campos__radios">
             <label>CPF:</label>
             <input type="radio" name="Documento" value="cpf" id="Radio-Cpf" onclick="alterarDisableRadios()" checked>
-            <input type="number" id="Campo-Cpf" maxlength="11">
+            <input type="number" id="Campo-Cpf" maxlength="11" onclick="ValidarCpf()">
             <label>RG:</label>
             <input type="radio" name="Documento" value="rg" id="Radio-Rg" onclick="alterarDisableRadios()">
             <input type="number" id="Campo-Rg" maxlength="10">

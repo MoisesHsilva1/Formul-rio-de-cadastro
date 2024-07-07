@@ -39,7 +39,9 @@ hidden {
 }
 #Campo-MensagemErro-Cep {
   display: none;
+  color: red;
 }
 #CampoEmail-MensagemError {
   display: none;
+  color: red;
 }
