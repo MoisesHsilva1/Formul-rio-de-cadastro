@@ -31,14 +31,13 @@ document.querySelector('#Campo-Cep').addEventListener('input', function () {
             });
     }
 })
-document.querySelector('#buton').addEventListener('click', function () {
+document.querySelector('#button').addEventListener('click', function () {
     const Email = document.getElementById('CampoEmail')
     const MensagemErrorEmail =  document.querySelector('#CampoEmail-MensagemError')
 
-    if (Email !== ".") { // tenho que atualizar
-        MensagemErrorEmail.style.display = 'block';
-        return false; 
-    };
+   for(let i = 0 ; Email ) {
+
+   }
 });
 
 function alterarDisableRadios() {
