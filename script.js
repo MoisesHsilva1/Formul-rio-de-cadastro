@@ -34,8 +34,6 @@ document.querySelector('#Campo-Cep').addEventListener('input', function () {
 document.querySelector('#button').addEventListener('click', function () {
     const Email = document.getElementById('CampoEmail')
     const MensagemErrorEmail =  document.querySelector('#CampoEmail-MensagemError')
-
-   
 });
 
 function alterarDisableRadios() {
